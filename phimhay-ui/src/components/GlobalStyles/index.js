@@ -1,4 +1,4 @@
-import "../GlobalStyles.scss"
+import "./GlobalStyles.scss"
 function GlobalStyles({chidlren}){
     return chidlren
 }
