@@ -1,5 +1,7 @@
-import '~/components/GlobalStyles/GlobalStyles.scss';
-function GlobalStyles({ chidlren }) {
-    return chidlren;
+import './GlobalStyles.scss';
+
+function GlobalStyles({ children }) {
+    return children;
 }
+
 export default GlobalStyles;
