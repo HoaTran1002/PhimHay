@@ -29,7 +29,15 @@ function Header() {
                     </button>
                 </div>
                 <div className={cx('right-header')}>
+                    <div className={cx('')}>
 
+                    </div>
+                    <div className={cx('')}>
+                        
+                    </div>
+                    <div className={cx('')}>
+                        
+                    </div>
                 </div>
             </div>
         </header>
