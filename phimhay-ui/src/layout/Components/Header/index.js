@@ -1,14 +1,16 @@
+//import {useState,useEffect} from 'react'
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Tippy from '@tippyjs/react';
+import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import { faCircleXmark, faSpinner,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import {Wrapper as PopperWrapper} from '~/layout/Components/Popper'
 
 import Images from '~/assets/images';
 const cx = classNames.bind(styles);
 function Header() {
-
+    
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -20,20 +22,30 @@ function Header() {
                         <Images/>
                     </div>
                 </div>
-                <div className={cx('search')}>
+                <Tippy
                     
-                        <input placeholder='Search account and videos'/>
+                    //visible={searchResult.length > 0}
+                    render={attrs => (
+                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                            <PopperWrapper >
+                                this is result 
+                            </PopperWrapper>
+                        </div>
+                )}>
+                    <div className={cx('search')}>
+                    
+                        <input  placeholder='Search account and videos'/>
                         <button className={cx('btn-clear')}> 
                             <FontAwesomeIcon icon={faCircleXmark}/>
                         </button>
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>
-                        <Tippy content="Hello" placement="Search">
-                            <button className={cx('btn-search')} >
-                                <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                            </button>
-                        </Tippy>
-                    
-                </div>
+                        <button className={cx('btn-search')} >
+                            <FontAwesomeIcon icon={faMagnifyingGlass}/>
+                        </button>
+                    </div>
+                
+                </Tippy>
+                
                 <div className={cx('right-header')}>
                     <div className={cx('')}>
 
