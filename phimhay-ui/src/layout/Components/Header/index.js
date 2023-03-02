@@ -1,4 +1,4 @@
-//import {useState,useEffect} from 'react'
+import {useState} from 'react'
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,9 +9,10 @@ import {Wrapper as PopperWrapper} from '~/layout/Components/Popper'
 import Account from '~/layout/Components/Account'
 
 import Images from '~/assets/images';
+
 const cx = classNames.bind(styles);
 function Header() {
-    
+    const [searchResult,setSearchResult] = useState("");
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -25,7 +26,7 @@ function Header() {
                 </div>
                 <Tippy
                     interactive
-                    visible//={searchResult.length > 0}
+                    visible={searchResult.length > 0}
                     render={attrs => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                             <PopperWrapper >
@@ -49,7 +50,10 @@ function Header() {
                 )}>
                     <div className={cx('search')}>
                     
-                        <input  placeholder='Search account and videos'/>
+                        <input onChange={(e)=>{
+                            setSearchResult(e.target.value);
+                            console.log(e.target.value)
+                        }}  placeholder='Search account and videos'/>
                         <button className={cx('btn-clear')}> 
                             <FontAwesomeIcon icon={faCircleXmark}/>
                         </button>
