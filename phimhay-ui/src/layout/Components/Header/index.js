@@ -2,10 +2,11 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faSpinner,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
-import { faCircleXmark, faSpinner,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import {Wrapper as PopperWrapper} from '~/layout/Components/Popper'
+import Account from '~/layout/Components/Account'
 
 import Images from '~/assets/images';
 const cx = classNames.bind(styles);
@@ -23,12 +24,26 @@ function Header() {
                     </div>
                 </div>
                 <Tippy
-                    
-                    //visible={searchResult.length > 0}
+                    interactive
+                    visible//={searchResult.length > 0}
                     render={attrs => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                             <PopperWrapper >
-                                this is result 
+                                <h3>Account</h3>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
+                                <Account/>
                             </PopperWrapper>
                         </div>
                 )}>
