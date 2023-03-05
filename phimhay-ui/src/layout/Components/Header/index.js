@@ -2,11 +2,12 @@ import {useState} from 'react'
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner,faMagnifyingGlass,faEllipsisVertical} from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import {Wrapper as PopperWrapper} from '~/layout/Components/Popper'
 import Account from '~/layout/Components/Account'
+import Button from '~/layout/Components/Button'
 
 import Images from '~/assets/images';
 
@@ -25,6 +26,7 @@ function Header() {
                     </div>
                 </div>
                 <Tippy
+                    
                     interactive
                     visible={searchResult.length > 0}
                     render={attrs => (
@@ -66,15 +68,15 @@ function Header() {
                 </Tippy>
                 
                 <div className={cx('right-header')}>
-                    <div className={cx('')}>
-
-                    </div>
-                    <div className={cx('')}>
-                        
-                    </div>
-                    <div className={cx('')}>
-                        
-                    </div>
+                    <Button outline>
+                        UPLOAD
+                    </Button>
+                    <Button primary>
+                        LOGIN
+                    </Button>
+                    <Button none icon={<FontAwesomeIcon icon={faEllipsisVertical}/>}>
+                        OPTION
+                    </Button>
                 </div>
             </div>
         </header>
