@@ -8,6 +8,7 @@ import 'tippy.js/dist/tippy.css';
 import {Wrapper as PopperWrapper} from '~/layout/Components/Popper'
 import Account from '~/layout/Components/Account'
 import Button from '~/layout/Components/Button'
+import Navigation from '~/layout/DefaultLayout/Navigation';
 
 import Images from '~/assets/images';
 
@@ -79,6 +80,7 @@ function Header() {
                     </Button>
                 </div>
             </div>
+            <Navigation/>
         </header>
     );
 }

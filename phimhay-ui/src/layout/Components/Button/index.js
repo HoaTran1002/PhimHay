@@ -13,6 +13,7 @@ function Button({
     small = false,
     large =false ,
     icon,
+    square,
     onClick,
     ...passProps}) {
     const props = {
@@ -36,7 +37,8 @@ function Button({
         outline,
         none,
         small,
-        large
+        large,
+        square
         
     })
     return ( 

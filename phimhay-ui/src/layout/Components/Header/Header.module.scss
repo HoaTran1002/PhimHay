@@ -1,122 +1,127 @@
 .wrapper {
-    position:fixed;
-    top :0;
+    
     display: flex;
     justify-content: center;
-    height: var(--header-height);
-    width: 100%;
-    border: 1px 0px solid #fff;
-    box-shadow: 0px 1px 0px rgb(204, 204, 204);
-    z-index: 2;
-}
-.inner {
-    height: var(--header-height);
-    width: 100%;
-    background-color: transparent;
-    padding: 0 60px;
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    background-image: url('../../../assets/images/deapool_test_paner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     
-    .right-header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.logo{
-    width: 60px;
-    height: 36px;
-    margin: 16px;
-}
-.search-result{
-    width: 440px;
-    position: relative;
-    
-}
-.search{
-    width: 440px;
-    height: 100%;
-    padding: 22px;
-    display:flex;
-    position: relative;
-    
-    
-    input{
-        font-size: 16px;
+    .inner {
+        position:fixed;
+        top :0;
+        height: var(--header-height);
         width: 100%;
-        height: 100%;
-        outline: none;
-        border: none;
-        color: #111;
-        padding-left: 10px;
-        border-top-left-radius: 18px;
-        border-bottom-left-radius: 18px;
-        background: #f1f1f1;
-        flex: 0.782;
+        background-color: transparent;
+        padding: 0 60px;
+        display: flex;
+        justify-content: space-between;
+        z-index:2;
+        // border: 1px 0px solid #fff;
+        // box-shadow: 0px 1px 0px rgb(204, 204, 204);
+        .right-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    .logo{
+        width: 60px;
+        height: 36px;
+        margin: 16px;
+    }
+    .search-result{
+        width: 440px;
+        position: relative;
         
-        &:focus{
-            border: 0.8px solid #999;
-            border-right: none; 
+    }
+    .search{
+        width: 440px;
+        height: 100%;
+        padding: 22px;
+        display:flex;
+        position: relative;
+        
+        input{
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            color: #111;
+            padding-left: 10px;
+            border-top-left-radius: 18px;
+            border-bottom-left-radius: 18px;
+            background: #f1f1f1;
+            flex: 0.782;
+            
+            &:focus{
+                border: 0.8px solid #999;
+                border-right: none; 
+                
+            }
+            &:focus ~ .btn-search{
+                border: 0.8px solid #999;
+                border-left: none; 
+                border-left: 2.5px solid #e5e5e5d9;
+            }
+            
             
         }
-        &:focus ~ .btn-search{
-            border: 0.8px solid #999;
-            border-left: none; 
-            border-left: 2.5px solid #e5e5e5d9;
-        }
-        
-        
-    }
-    .btn-clear{
-        z-index:  1;
-        position: absolute;
-        top: 30px;
-        left: 69.5%;
-        outline: none;
-        border: none;
-        font-size: 17px;
-        color: var(--primary);
-       
-        :hover{
-            cursor: pointer;
-        }
-
-    }
-    .loading{
-        z-index:  1;
-        position: absolute;
-        top: 30px;
-        left: 69.5%;
-        outline: none;
-        border: none;
-        font-size: 17px;
-        color: var(--primary);
-    }
+        .btn-clear{
+            z-index:  1;
+            position: absolute;
+            top: 30px;
+            left: 69.5%;
+            outline: none;
+            border: none;
+            font-size: 17px;
+            color: var(--primary);
+           
+            :hover{
+                cursor: pointer;
+            }
     
-    .btn-search{
-        padding-top: 0px;
-        width: 50px;
-        /* border: none; */
-        /* border-left: #222; */
-        height: 45%;
-        border: none;
-        /* border-left-color: #222; */
-        /* border-radius: 18px; */
-        position: absolute;
-        top: 22px;
-        left: 76%;
-        font-size: 127%;
-        color: #999;
-        background: #f1f1f1;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
-        padding-left: 4px;
-        border-left: 2.5px solid #e5e5e5d9;
-        &:hover{
-            cursor: pointer;
-            background: #e1e1e1;
-            color: #6e6c6c;
         }
-
+        .loading{
+            z-index:  1;
+            position: absolute;
+            top: 30px;
+            left: 69.5%;
+            outline: none;
+            border: none;
+            font-size: 17px;
+            color: var(--primary);
+        }
+        
+        .btn-search{
+            padding-top: 0px;
+            width: 50px;
+            /* border: none; */
+            /* border-left: #222; */
+            height: 45%;
+            border: none;
+            /* border-left-color: #222; */
+            /* border-radius: 18px; */
+            position: absolute;
+            top: 22px;
+            left: 76%;
+            font-size: 127%;
+            color: #999;
+            background: #f1f1f1;
+            border-top-right-radius: 18px;
+            border-bottom-right-radius: 18px;
+            padding-left: 4px;
+            border-left: 2.5px solid #e5e5e5d9;
+            &:hover{
+                cursor: pointer;
+                background: #e1e1e1;
+                color: #6e6c6c;
+            }
+    
+        }
     }
 }

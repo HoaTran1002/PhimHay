@@ -52,3 +52,20 @@
         background: rgb(194, 140, 140);
     }
 }
+.square{
+    width: auto;
+    padding: 4px;
+    border:1px solid rgb(141, 232, 248);
+    border-radius: 0;
+    background-color: transparent;
+
+    color: #fff;
+    font-weight: 800;
+
+    
+    &:hover{
+        box-shadow: rgb(141, 232, 248) 0px 5px 15px;
+        background-color: rgb(141, 232, 248);
+    }
+    
+}

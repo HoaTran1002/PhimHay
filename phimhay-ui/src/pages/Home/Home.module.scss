@@ -1,0 +1,12 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    .list-movies{
+        position: absolute;
+        width: 100%;
+        top: calc(var(--header-height) + 200px);
+        background-color: rgb(94, 81, 206);
+        padding: 60px;
+    }
+
+}

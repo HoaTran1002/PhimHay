@@ -1,5 +1,18 @@
+import classNames from "classnames/bind";
+import Styles from "./Home.module.scss"
+import Carousel from "~/layout/Components/Carousel";
+import ListCard from "~/layout/Components/ListCard";
+
+
+const cx = classNames.bind(Styles);
 function Home() {
-    return <h2>Home</h2>;
+    return <div className={cx('wrapper')}>
+        <Carousel/>
+        <div className={cx('list-movies')}>
+            <ListCard/>
+        </div>
+        
+    </div>;
 }
 
 export default Home;
