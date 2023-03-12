@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import Styles from './Home.module.scss';
 import Carousel from '~/layout/Components/Carousel';
 import ListCard from '~/layout/Components/ListCard';
+import Slider from '~/layout/Components/Slider';
 
 const cx = classNames.bind(Styles);
 function Home() {
@@ -12,7 +13,8 @@ function Home() {
                 <ListCard />
             </div>
             <div className={cx('hot-movies')}>
-                <span>hot movies</span>
+                <span className={cx('title')}>hot movies</span>
+                <Slider />
             </div>
         </div>
     );

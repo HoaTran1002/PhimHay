@@ -12,6 +12,8 @@ function Button({
     none=false,
     small = false,
     large =false ,
+    sliderPre,
+    sliderNext,
     icon,
     square,
     onClick,
@@ -38,7 +40,9 @@ function Button({
         none,
         small,
         large,
-        square
+        square,
+        sliderNext,
+        sliderPre
         
     })
     return ( 

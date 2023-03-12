@@ -1,71 +1,70 @@
-.wrapper{
-
-    
+.wrapper {
     width: 90px;
     height: 32px;
-    font-weight:bold;
+    font-weight: bold;
     border: none;
     text-align: center;
     margin: 0 auto;
     padding: 8px 12px;
-    color:var(--text-color);
-    border-radius:12px;
-    + .wrapper{
-        margin-left:10px;
+    color: var(--text-color);
+    border-radius: 12px;
+    + .wrapper {
+        margin-left: 10px;
     }
-    &.disabled{
+    &.disabled {
         pointer-events: none;
         opacity: 0.5;
     }
-    &:hover{
+    &:hover {
         cursor: pointer;
-
     }
-    .icon{
+    .icon {
         margin-right: 4px;
     }
-    
+    .sliderPre {
+        color: #fff;
+        cursor: pointer;
+    }
+    .sliderNext {
+        color: #fff;
+        cursor: pointer;
+    }
 }
-.primary{
+.primary {
     background: var(--button-color);
     color: #fff;
     border: 1px solid #fff;
-    &:hover{
+    &:hover {
         background: rgb(194, 140, 140);
     }
-   
-    
 }
-.outline{
-    color:var(red);
+.outline {
+    color: var(red);
     background: #fff;
     border: 2.5px solid #00dcff;
-    &:hover{
+    &:hover {
         background: rgb(141, 232, 248);
     }
-    
 }
-.none{
-    color:rgb(207, 16, 16);
+.none {
+    color: rgb(207, 16, 16);
     background: #fff;
-    &:hover{
+    &:hover {
         background: rgb(194, 140, 140);
     }
 }
-.square{
+.square {
     width: auto;
     padding: 4px;
-    border:1px solid rgb(141, 232, 248);
+    border: 1px solid rgb(141, 232, 248);
     border-radius: 0;
     background-color: transparent;
 
     color: #fff;
     font-weight: 800;
 
-    
-    &:hover{
+    &:hover {
         box-shadow: rgb(141, 232, 248) 0px 5px 15px;
         background-color: rgb(141, 232, 248);
     }
-    
 }
