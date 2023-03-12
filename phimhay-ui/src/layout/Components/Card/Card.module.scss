@@ -1,0 +1,48 @@
+.wrapper {
+    position: relative;
+    background-color: transparent;
+    height: 350px;
+    max-width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+
+    .top-card {
+        transform: rotateX(-0.2turn);
+        height: 0;
+        opacity: 0.1;
+        position: absolute;
+        width: 100%;
+        position: absolute;
+        background-color: #333;
+        color: #333;
+        transition: 0.4s ease-out;
+    }
+    .detail {
+        height: 0;
+        opacity: 0.1;
+        position: absolute;
+        width: 100%;
+        top: 350px;
+        background-color: #333;
+        color: #333;
+        transition: 0.4s ease-out;
+    }
+    &:hover {
+        .top-card {
+            transform: rotateX(0);
+            height: 80px;
+            opacity: 1;
+            color: #fff;
+            box-shadow: rgba(233, 229, 229, 1) 0px 20px 25px -5px, rgba(236, 230, 230, 1) 0px 10px 10px -5px;
+            transition: 0.4s ease-out;
+        }
+        .detail {
+            height: 140px;
+            opacity: 1;
+            color: #fff;
+            box-shadow: 0px 10px 5px lightblue inset;
+            transition: 0.4s ease-out;
+            top: 60%;
+        }
+    }
+}
