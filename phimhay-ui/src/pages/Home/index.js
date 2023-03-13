@@ -12,9 +12,12 @@ function Home() {
             <div className={cx('list-movies')}>
                 <ListCard />
             </div>
-            <div className={cx('hot-movies')}>
-                <span className={cx('title')}>hot movies</span>
+            <div className={cx('top-game')}>
+                <span className={cx('title')}>Game Center</span>
                 <Slider />
+            </div>
+            <div className={cx('trending-music')}>
+                
             </div>
         </div>
     );
